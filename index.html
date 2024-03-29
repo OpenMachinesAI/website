@@ -1,62 +1,58 @@
-<html>
-  <head>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>The Controller Project</title>
-
-    <meta property="og:title" content="The OpenMachines Project" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OpenMachines" />
-    <meta name="twitter:description" content="Open Machines lets language models control any robot." />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <div class="relative cursor-default bg-white invert selection:bg-black selection:text-white">
-      <video class="pointer-events-none absolute left-1/2 top-1/2 -z-10 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 transform object-cover opacity-[40%] invert" autoplay loop muted playsinline poster="https://openinterpreter.com/assets/computer_api.png">
-        <source src="https://openinterpreter.com/assets/ncu_short.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <nav class="fixed top-0 z-10 flex w-full items-center justify-between px-6 py-6 sm:px-12">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Controller Project</title>
+  <meta property="og:title" content="The OpenMachines Project">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OpenMachines">
+  <meta name="twitter:description" content="Open Machines lets language models control any robot.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="relative min-h-screen cursor-default bg-white invert selection:bg-black selection:text-white">
+    <video class="absolute top-0 left-0 z-0 min-w-full min-h-full object-cover opacity-40 invert" autoplay loop muted playsinline poster="https://openinterpreter.com/assets/computer_api.png">
+      <source src="https://openinterpreter.com/assets/ncu_short.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <header class="fixed top-0 left-0 z-10 w-full px-6 py-6 sm:px-12">
+      <nav class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <div class="h-8 w-8 rounded-full bg-black saturate-200"></div>
+          <div class="hidden text-xl md:block">Controller</div>
         </div>
-        <div class="hidden text-xl md:block">Controller</div>
-        <div class="flex flex-col text-lg md:flex-row md:space-x-12"><a href="https://github.com/KillianLucas/open-interpreter/" class="hover:underline">About</a><a href="https://changes.openinterpreter.com/" class="hover:underline">Updates</a><a href="https://docs.openinterpreter.com/" class="hover:underline">Docs</a><a href="https://twitter.com/hellokillian" class="hover:underline">Contact</a></div>
+        <div class="flex flex-col text-lg md:flex-row md:space-x-12">
+          <a href="https://github.com/KillianLucas/open-interpreter/" class="hover:underline">About</a>
+          <a href="https://changes.openinterpreter.com/" class="hover:underline">Updates</a>
+          <a href="https://docs.openinterpreter.com/" class="hover:underline">Docs</a>
+          <a href="https://twitter.com/hellokillian" class="hover:underline">Contact</a>
+        </div>
       </nav>
-      <section class="z-10 h-screen pb-12 sm:pb-0">
-        <div id="hero" class="flex h-full flex-col justify-end p-6 sm:p-12">
-          <div class="mb-4 text-5xl font-light sm:w-auto sm:text-7xl md:max-w-4xl">
-            <div>An Open Source version of figure 01<br />for every robot</div>
-          </div>
-          <span class="mb-6 text-xl font-light">Open Machine's controller project lets LLMs control robots to complete tasks in our world.</span>
-
-          <div class="flex flex-wrap justify-between text-lg">
-            <!-- Container for the two left buttons -->
-            <div class="mb-4 mr-4 flex items-center space-x-6 md:mb-0">
-              <a href="https://github.com/OpenMachinesAI/controller" class="h-min border border-black px-3 py-2 hover:bg-black hover:text-white">Github</a>
-              <a href="" class="flex h-min items-center space-x-1 border-b border-black hover:border-transparent">
-                <span>Watch Video</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="h-5 w-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Right button -->
+    </header>
+    <main class="flex flex-col items-center justify-center min-h-screen px-6 py-12 sm:py-0 sm:px-12">
+      <div id="hero" class="text-center">
+        <h1 class="mb-4 text-5xl font-light sm:text-7xl md:max-w-4xl">
+          An Open Source version of figure 01<br>for every robot
+        </h1>
+        <p class="mb-6 text-xl font-light">Open Machine's controller project lets LLMs control robots to complete tasks in our world.</p>
+        <div class="flex flex-wrap justify-center text-lg">
+          <div class="mb-4 mr-4 flex items-center space-x-6 md:mb-0">
+            <a href="https://github.com/OpenMachinesAI/controller" class="h-min border border-black px-3 py-2 hover:bg-black hover:text-white">Github</a>
+            <a href="#" class="flex h-min items-center space-x-1 border-b border-black hover:border-transparent">
+              <span>Watch Video</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+              </svg>
+            </a>
           </div>
         </div>
-      </section>
-    </div>
-  </body>
+      </div>
+    </main>
+  </div>
+</body>
 </html>
