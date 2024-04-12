@@ -7,7 +7,15 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+/* Font Loading */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* Apply Orbitron font to everything */
 *,
+::before,
+::after {
+  font-family: 'Orbitron', sans-serif;
+}
 ::before,
 ::after {
   box-sizing: border-box;
